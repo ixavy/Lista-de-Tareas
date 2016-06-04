@@ -13,6 +13,7 @@
 		E1ADE38E1D0326AB00D59233 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1ADE38C1D0326AB00D59233 /* Main.storyboard */; };
 		E1ADE3901D0326AB00D59233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1ADE38F1D0326AB00D59233 /* Assets.xcassets */; };
 		E1ADE3931D0326AB00D59233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1ADE3911D0326AB00D59233 /* LaunchScreen.storyboard */; };
+		E1ADE3BB1D0392D900D59233 /* Persistencia.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1ADE3BA1D0392D900D59233 /* Persistencia.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E1ADE38F1D0326AB00D59233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1ADE3921D0326AB00D59233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E1ADE3941D0326AB00D59233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1ADE3BA1D0392D900D59233 /* Persistencia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistencia.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				E1ADE3881D0326AB00D59233 /* FirstViewController.swift */,
 				E1ADE38A1D0326AB00D59233 /* SecondViewController.swift */,
 				E1ADE38C1D0326AB00D59233 /* Main.storyboard */,
+				E1ADE3BA1D0392D900D59233 /* Persistencia.swift */,
 				E1ADE38F1D0326AB00D59233 /* Assets.xcassets */,
 				E1ADE3911D0326AB00D59233 /* LaunchScreen.storyboard */,
 				E1ADE3941D0326AB00D59233 /* Info.plist */,
@@ -141,6 +144,7 @@
 				E1ADE38B1D0326AB00D59233 /* SecondViewController.swift in Sources */,
 				E1ADE3871D0326AB00D59233 /* AppDelegate.swift in Sources */,
 				E1ADE3891D0326AB00D59233 /* FirstViewController.swift in Sources */,
+				E1ADE3BB1D0392D900D59233 /* Persistencia.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +294,7 @@
 				E1ADE3991D0326AB00D59233 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

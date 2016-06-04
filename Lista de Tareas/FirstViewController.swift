@@ -9,6 +9,8 @@
 import UIKit
 
 var taskList = [String]()
+let taskListKey = "taskList"
+let persistenceModel = Persistencia()
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -31,6 +33,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         if editingStyle == UITableViewCellEditingStyle.Delete {
             taskList.removeAtIndex(indexPath.row)
             table.reloadData()
+            persistenceModel.writeTasks(taskList, tasksKey: taskListKey)
         }
     }
     
@@ -43,9 +46,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         table.delegate = self
         
-        if let taskLoaded = NSUserDefaults.standardUserDefaults().objectForKey("taskList") {
-            taskList = taskLoaded as! [String]
-        }
+        taskList = persistenceModel.loadTasks(taskListKey)
     }
 
     override func didReceiveMemoryWarning() {

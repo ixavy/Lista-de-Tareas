@@ -17,10 +17,9 @@ class SecondViewController: UIViewController {
             if taskToNew != "" {
                 taskList.append(taskToNew)
                 newTask.text = ""
-                NSUserDefaults.standardUserDefaults().setValue(taskList, forKey: "taskList")
+                persistenceModel.writeTasks(taskList, tasksKey: taskListKey)
             }
         }
-        
     }
     
     override func viewDidLoad() {

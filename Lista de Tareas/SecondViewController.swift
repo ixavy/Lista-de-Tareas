@@ -7,24 +7,28 @@
 //
 
 import UIKit
-
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var newTask: UITextField!
     
-    
     @IBAction func addButton(sender: AnyObject) {
+        
+        if let taskToNew = newTask.text {
+            if taskToNew != "" {
+                taskList.append(taskToNew)
+                newTask.text = ""
+                NSUserDefaults.standardUserDefaults().setValue(taskList, forKey: "taskList")
+            }
+        }
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

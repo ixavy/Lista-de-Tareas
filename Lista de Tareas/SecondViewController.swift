@@ -7,12 +7,15 @@
 //
 
 import UIKit
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var newTask: UITextField!
     
     @IBAction func addButton(sender: AnyObject) {
-        
+        self.addTask()
+    }
+    
+    func addTask() {
         if let taskToNew = newTask.text {
             if taskToNew != "" {
                 taskList.append(taskToNew)
@@ -22,8 +25,19 @@ class SecondViewController: UIViewController {
         }
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.addTask()
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        newTask.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
